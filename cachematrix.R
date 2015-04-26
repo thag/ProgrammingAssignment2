@@ -14,6 +14,7 @@ makeCacheMatrix <- function(inp = matrix()) {
     
     #if the cache is null or different matrix, calculate inverse and cache
     if(is.null(matrixOriginal) | (!(isMatrixEqual(matrixOriginal, inp)))){
+        message("calculated as empty cache or new matrix")
         matrixOriginal <<- inp             #store inp as global variable 
         inverseMatrixCache <<- solve(inp)
     }
